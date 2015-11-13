@@ -34,6 +34,7 @@ p {
 .jumbotron {
   background-image:url('https://p3cdn4static.sharpschool.com/UserFiles/Servers/Server_747631/Image/images/admsvs/M%20and%20O/1859%20Bird%20Street.JPG');
   background-size: cover;
+  height: 100%;
 }
 
 .jumbotron h1 {
