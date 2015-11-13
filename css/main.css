@@ -1,6 +1,5 @@
 body {
     background-color: #cc6600
-    color: green;
     margin: 60px auto;
     width: 70%;
 }
@@ -39,7 +38,7 @@ p {
 }
 
 .jumbotron h1 {
-    color: #fff;
+    color: #9933CC;
     font-size: 48px;
     font-weight: bold;
     font-family: Shift, sans-serif;
