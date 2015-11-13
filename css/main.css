@@ -5,7 +5,7 @@ body {
 }
 
 nav ul, footer ul {
-    font-family:'Verdana', 'Arial', 'Sans-Serif';
+    font-family: "Times New Roman", Times, serif;
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -23,7 +23,7 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Verdana', 'Arial', 'Sans-Serif';
+    font-family: "Times New Roman", Times, serif;
 }
 p {
     font-size: 1.5em;
