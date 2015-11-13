@@ -34,7 +34,7 @@ p {
 .jumbotron {
   background-image:url('https://goo.gl/kyntya');
   background-size: cover;
-  
+  height: 500px;
 }
 
 .jumbotron h1 {
