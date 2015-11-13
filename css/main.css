@@ -33,9 +33,20 @@ p {
 
 .jumbotron {
   background-image:url('https://p3cdn4static.sharpschool.com/UserFiles/Servers/Server_747631/Image/images/logos/Butte_COE_Logo.gif');
-  height: 500px;
+  height: 1000px;
 }
 
+.jumbotron h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Shift, sans-serif;
+}
+
+.jumbotron p{
+    color: #fff;
+    font-size: 20px;
+}
 
 footer {
     border-top: 1px solid #d5d5d5;
