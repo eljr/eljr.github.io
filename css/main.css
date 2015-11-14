@@ -59,7 +59,9 @@ more{
   font-weight: bold;
 }
 
-
+.more a {
+    color:  #00b0ff;
+}
 
 footer {
     border-top: 1px solid #d5d5d5;
