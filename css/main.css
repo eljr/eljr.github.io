@@ -49,6 +49,11 @@ p {
     font-size: 20px;
 }
 
+.jumbotron .container {
+    position: relative;
+    top: 100px;
+}
+
 more{
     background-color: #f7f7f7;
 }
