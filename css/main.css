@@ -49,10 +49,12 @@ p {
     font-size: 20px;
 }
 
-.push-spaces
+.more
 {
-    height: 100px;
+    background-color: #f7f7f7;
 }
+
+
 
 footer {
     border-top: 1px solid #d5d5d5;
