@@ -90,12 +90,14 @@
                 <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
                 <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
                 <!-- NOTE: To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-                <form id="contactform" action="//formspree.io/montesit2014@gmai.com" method="POST">
-                    <input type="text" name="name" placeholder="Your name">
-                    <input type="email" name="_replyto" placeholder="Your email">
-                    <textarea name="message" placeholder="Your message"></textarea>
-                    <input type="submit" value="Send">
-                </form>
+                <form id="contactform" method="POST">
+    <input type="text" name="name" placeholder="Your name">
+    <input type="email" name="_replyto" placeholder="Your email">
+    <input type="hidden" name="_subject" value="Website contact" />
+    <textarea name="message" placeholder="Your message"></textarea>
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="submit" value="Send">
+</form>
 
 
     <!-- Footer -->
