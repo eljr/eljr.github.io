@@ -89,7 +89,25 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p style="text-align:center;">Send me an email -> chicoermo@outlook.com</p>
+                <p>Contact me!</p>
+        <div class="panel-body">
+    	<form name="form1" id="form1" action="" method="post">
+    			<fieldset>
+    			  <input type="text" class="form-control" name="fullname" placeholder="Full Name" />
+    			  <br />
+    			  <input type="text" class="form-control" name="subject" placeholder="Subject" />
+    			  <br />
+    			  <input type="text" class="form-control" name="phone" placeholder="Phone" />
+    			  <br />
+    			  <input type="email" class="form-control" name="emailid" placeholder="Email" />
+    			  <br />
+    			  <textarea rows="4" class="form-control" cols="20" name="comments" placeholder="Comments"></textarea>
+    			  <br />
+    			  <input type="submit" class="btn btn-success"name="submit" value="Send Message" />
+    			</fieldset>
+    	</form>
+    	<p><?php if(!empty($message)) echo $message; ?></p>
+    	</div>    
                
         </div>
     </div>
