@@ -1,32 +1,42 @@
 <?php
-$name = $_POST["name"];
-$email = $_POST["email"];
-$message = $_POST["message"];
  
-$EmailTo = "montesit2014@gmail.com";
-$Subject = "New Message Received";
+// Email address verification
+function isEmail($email) {
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
  
-// prepare email body text
-$Body .= "Name: ";
-$Body .= $name;
-$Body .= "\n";
+if($_POST) {
  
-$Body .= "Email: ";
-$Body .= $email;
-$Body .= "\n";
+    // Enter the email where you want to receive the message
+    $emailTo = 'contact.azmind@gmail.com';
  
-$Body .= "Message: ";
-$Body .= $message;
-$Body .= "\n";
+    $clientEmail = addslashes(trim($_POST['email']));
+    $subject = addslashes(trim($_POST['subject']));
+    $message = addslashes(trim($_POST['message']));
+    $antispam = addslashes(trim($_POST['antispam']));
  
-// send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+    $array = array('emailMessage' => '', 'subjectMessage' => '', 'messageMessage' => '', 'antispamMessage' => '');
  
-// redirect to success page
-if ($success){
-   echo "success";
-}else{
-    echo "invalid";
+    if(!isEmail($clientEmail)) {
+        $array['emailMessage'] = 'Invalid email!';
+    }
+    if($subject == '') {
+        $array['subjectMessage'] = 'Empty subject!';
+    }
+    if($message == '') {
+        $array['messageMessage'] = 'Empty message!';
+    }
+    if($antispam != '12') {
+        $array['antispamMessage'] = 'Wrong antispam answer!';
+    }
+    if(isEmail($clientEmail) && $subject != '' && $message != '' && $antispam == '12') {
+        // Send email
+        $headers = "From: " . $clientEmail . " <" . $clientEmail . ">" . "\r\n" . "Reply-To: " . $clientEmail;
+        mail($emailTo, $subject . " (bootstrap contact form tutorial)", $message, $headers);
+    }
+ 
+    echo json_encode($array);
+ 
 }
  
 ?>
